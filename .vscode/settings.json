@@ -1,8 +1,13 @@
 {
-    "files.autoSave": "afterDelay",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSaveMode": "modifications",
-    "editor.formatOnType": true,
-    "diffEditor.codeLens": true,
-    "editor.formatOnSave": true
+  "files.autoSave": "afterDelay",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.formatOnType": true,
+  "diffEditor.codeLens": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.codeActionsOnSaveTimeout": 1000,
+  "prettier.printWidth": 140
 }

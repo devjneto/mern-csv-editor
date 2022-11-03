@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllDocuments } from '@client/features/documentsSlice';
-import { fetchAllDocuments } from '../api/documents';
+import { fetchAllDocuments } from '../features/documents';
 import { useEffect } from 'react';
+import DocumentsTable from './DocumentsTable';
 
 export default function DocumentsList() {
   const dispatch = useDispatch<any>();
@@ -14,7 +15,7 @@ export default function DocumentsList() {
 
   return (
     <div>
-      <ul>{JSON.stringify(documents)}</ul>
+      <DocumentsTable documents={documents} />
     </div>
   );
 }

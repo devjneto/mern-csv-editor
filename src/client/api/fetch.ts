@@ -1,7 +1,7 @@
 export const API_URL = 'http://localhost:3001/';
 
-export const getDocuments = async () => {
-  const response = await fetch(`${API_URL}documents`);
+export const getDocuments = async (id?: string) => {
+  const response = await fetch(`${API_URL}documents/${id || ''}`);
   const data = await response.json();
   return data;
 };
@@ -9,8 +9,13 @@ export const getDocuments = async () => {
 export const uploadDocument = async (documentFromCsv) => {
   const response = await fetch(`${API_URL}documents`, {
     method: 'POST',
-    headers: {},
-    body: JSON.stringify({ document: documentFromCsv }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      document: documentFromCsv.text,
+      name: documentFromCsv.filename,
+    }),
   });
   const data = await response.json();
   return data;

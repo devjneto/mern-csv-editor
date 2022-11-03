@@ -39,13 +39,14 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid #fff;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
+  color: #fff;
   transition: border-color 0.25s;
 }
 button:hover {
@@ -56,9 +57,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
+    color: #c0cfdb;
     background-color: #ffffff;
   }
   a:hover {
@@ -66,5 +67,6 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+    color: #fff;
   }
 }
