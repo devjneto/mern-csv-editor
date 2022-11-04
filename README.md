@@ -23,7 +23,7 @@ This starts backend on port 3000
 # ENV for Development
 ```env
 MONGO_URL=mongodb://localhost:27017/docs
-PORT=3001
+PORT=3000
 ```
 
 # Stack 
