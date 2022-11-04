@@ -1,6 +1,6 @@
 import { createAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { getDocuments, saveDocumentUpdates as saveDoc, uploadDocument as uploadDocToServer } from '../api/fetch';
-import setAlert, { setAlertAction } from './alertsSlice';
+import { setAlertAction } from './alertsSlice';
 
 export const fetchAllDocuments = createAsyncThunk('documents/fetchAll', async () => {
   const documents = await getDocuments();
