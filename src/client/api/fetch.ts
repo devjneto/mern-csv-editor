@@ -1,4 +1,4 @@
-export const API_URL = 'http://localhost:3001/';
+export const API_URL = 'http://localhost:3000/';
 
 export const getDocuments = async (id?: string) => {
   const response = await fetch(`${API_URL}documents/${id || ''}`);
