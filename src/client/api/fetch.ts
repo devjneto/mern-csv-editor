@@ -20,3 +20,21 @@ export const uploadDocument = async (documentFromCsv) => {
   const data = await response.json();
   return data;
 };
+
+export const saveDocumentUpdates = async (document) => {
+  const response = await fetch(`${API_URL}documents/${document.id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      document: document.id,
+      changes: document.changes,
+    }),
+  });
+  const data = await response.json();
+  return {
+    data,
+    status: response.status,
+  };
+}

@@ -17,17 +17,7 @@ function DocumentPage() {
     dispatch(fetchSingleDocument(id));
   }, [dispatch]);
 
-  return (
-    <Box display="grid" gridGap={2} gridAutoFlow="row dense">
-      <Box display="flex" justifyContent="center">
-        <h2>Editar doc</h2>
-      </Box>
-
-      <Box display="flex" justifyContent="center">
-        {document && <DocumentEditor document={document} />}
-      </Box>
-    </Box>
-  );
+  return <>{document?._id && <DocumentEditor document={document} />}</>;
 }
 
 export default DocumentPage;

@@ -13,9 +13,5 @@ export default function DocumentsList() {
     dispatch(fetchAllDocuments());
   }, [dispatch]);
 
-  return (
-    <div>
-      <DocumentsTable documents={documents} />
-    </div>
-  );
+  return <DocumentsTable documents={documents} />;
 }

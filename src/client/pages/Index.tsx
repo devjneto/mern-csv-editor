@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button, Link, Stack } from '@chakra-ui/react';
 import DocumentsList from '../components/DocumentList';
 import { uploadDocument } from '../features/documents';
 
@@ -37,11 +37,18 @@ function Index() {
 
   return (
     <Box display="grid" gridGap={2} gridAutoFlow="row dense">
-      <Box display="flex" justifyContent="right">
-        <Button onClick={uploadButton}>Upload CSV File</Button>
-      </Box>
+      <Box display="grid" gridGap={2} gridAutoFlow="row dense">
+        <Stack spacing={4} direction="row-reverse">
+          <Button onClick={uploadButton} colorScheme="blue" size="sm">
+            Upload CSV
+          </Button>
+          <Link href={'/'}>
+            <Button colorScheme="gray" size="sm">
+              Refresh
+            </Button>
+          </Link>
+        </Stack>
 
-      <Box display="flex" justifyContent="center">
         <DocumentsList />
       </Box>
     </Box>
