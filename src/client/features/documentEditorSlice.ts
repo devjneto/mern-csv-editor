@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { addDocumentUpdate, fetchAllDocuments, fetchSingleDocument } from './documents';
+import { addDocumentUpdate } from './documents';
 
 const documentSlice = createSlice({
   name: 'documentEditor',
